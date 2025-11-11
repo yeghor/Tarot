@@ -5,3 +5,6 @@ def sum(a: int, b: int) -> int:
 
 
 print(sum(3,2))
+
+x = sum(3,2)
+print(x)
