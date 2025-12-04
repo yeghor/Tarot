@@ -1,6 +1,13 @@
-
-# Прописать методы для работы с класом. Сервис MainService будет вызыватся с эндпоинта. Сервис может работать напрямую с другими сервисами
-# Сделай в инициализаторе класса создание сервиса GeminiAPI (импортируй с другого файла)
+from backend.types import TaroTypes
+from TaroMLP.backend.upload_card_db import taro_data
+from backend.gemini_service import AIService, GeminiService
 
 class MainService:
-    pass
+    def __init__(self, predict_type: TaroTypes, prompt: str, AIServiceClass: AIService):
+        self.AIService: AIService = AIServiceClass()
+
+        self.predictType = predict_type
+        self.prompt = prompt
+
+    def predict(self):
+        pass
