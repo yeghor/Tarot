@@ -1,0 +1,1 @@
+export type PredictionTypes = "love" | "future" | "career" | "impression";
