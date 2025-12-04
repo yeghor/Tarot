@@ -1,4 +1,5 @@
-from project_types import TaroType, TaroData
+from project_types import TaroTypes, TaroData
+import json
 
 taro_data: TaroData = {
     "love": "Reveals emotional dynamics, intentions, hidden tensions and potential outcomes in relationships. Focuses on how two people align, what blocks them, and where the connection is heading.",
@@ -8,3 +9,7 @@ taro_data: TaroData = {
 }
 # https://www.tarot.com/tarot/cards
 
+with open('original_data/cards_data.json', 'r') as f:
+    tarot_cards = json.load(f)
+
+# print({"TaroType": taro_data, "TaroCards": tarot_cards})
