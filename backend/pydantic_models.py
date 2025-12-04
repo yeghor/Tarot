@@ -4,6 +4,7 @@ from typing import List, Any
 
 #сделать тип для карточки (название, описание)
 # DTOs
+<<<<<<< HEAD
 
 class Card(BaseModel):
     name: str
@@ -17,3 +18,7 @@ class PredictionResponse(BaseModel):
     cards: List[CardExtended]
     image_name: str 
 
+=======
+class Schema:
+    pass
+>>>>>>> c8bad3ac930c8886d7b7f5b50dd123ac32225848
