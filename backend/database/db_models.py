@@ -1,15 +1,17 @@
-from sqlalchemy.orm import DeclarativeBase, mapped_column, Mapped
-from TaroMLP.backend.project_types import TaroTypes
+from sqlalchemy.orm import mapped_column, Mapped, DeclarativeBase
+from database.db_connect import engine
 
 class Base(DeclarativeBase):
     pass
 
-class TaroCard(Base):
-    card_id: Mapped[int] = mapped_column(primary_key=True)
-    card_type: Mapped[TaroTypes] = mapped_column()
-    img_name = Mapped[str] = mapped_column(nullable=True, default="")
+class TarotCard(Base):
+    __tablename__ = "tarot_card"
 
-    description: Mapped[str] = mapped_column()
+    card_id: Mapped[str] = mapped_column(primary_key=True)
+    card_name: Mapped[str] = mapped_column()
+    img_name: Mapped[str] = mapped_column(nullable=True, default="")
 
+    regular_desc: Mapped[str] = mapped_column()
+    flipped_desc: Mapped[str] = mapped_column()
 
-Base.metadata.create_all()
+Base.metadata.create_all(bind=engine)

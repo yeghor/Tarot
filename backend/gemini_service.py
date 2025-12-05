@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-from google import genai
+import google.generativeai as genai
 from abc import ABC, abstractmethod
 from dotenv import load_dotenv
 from os import getenv
@@ -31,12 +31,25 @@ Tone:
 """
 
 taro_data: TaroData = {
-    "love": "Reveals emotional dynamics, intentions, hidden tensions and potential outcomes in relationships. Focuses on how two people align, what blocks them, and where the connection is heading.",
-    "future": "Gives a snapshot of likely upcoming events if things continue as they are. Not fate, but a probability curve shaped by your current choices and momentum.",
-    "career": "Shows work-related trends: opportunities, risks, motivation, burnout markers and how your actions might influence professional growth or stagnation.",
-    "impression": "Reflects how someone currently perceives you — your energy, your strengths, your weaknesses, and the overall vibe you project in their eyes."
+    "love": {
+        "k": 5,
+        "description": "Reveals emotional dynamics, intentions, hidden tensions and potential outcomes in relationships. Focuses on how two people align, what blocks them, and where the connection is heading."
+    },
+    "future": {
+        "k": 5,
+        "description": "Gives a snapshot of likely upcoming events if things continue as they are. Not fate, but a probability curve shaped by your current choices and momentum."
+    },
+    "career": {
+        "k": 5,
+        "description": "Shows work-related trends: opportunities, risks, motivation, burnout markers and how your actions might influence professional growth or stagnation."
+    },
+    "impression": {
+        "k": 1,
+        "description": "Reflects how someone currently perceives you — your energy, your strengths, your weaknesses, and the overall vibe you project in their eyes."
+    }
 }
 
+genai.configure(api_key=getenv("GOOGLE_API_KEY"))
 
 class AIServiceABC(ABC):
     @staticmethod
@@ -49,7 +62,7 @@ class AIServiceABC(ABC):
     
         user_prompt_ready = f"USER PROMPT: {user_prompt}"
 
-        predict_type = f"PREDICTION TYPE: {predict_type} - {taro_data[predict_type]}"
+        predict_type = f"PREDICTION TYPE: {predict_type} - {taro_data[predict_type]["description"]}"
 
         return f"{BASE_PROMPT} \n\n {predict_type} \n {cards_desc} \n {user_prompt_ready}"
 
@@ -61,16 +74,14 @@ class AIServiceABC(ABC):
 class GeminiService(AIServiceABC):
     def __init__(self):
         # The client gets the API key from the environment variable `GEMINI_API_KEY`.
-        self._client = genai.Client(api_key=getenv("GEMINI_API_KEY"))
+        self._client = genai.GenerativeModel(model_name="gemini-2.5-flash")
 
     def make_prediction(self, predict_type, prompt, cards):
         prepared_prompt = self._create_full_prompt(predict_type, prompt, cards)
-        try:
-            print(prepared_prompt)
-            response = self._client.models.generate_content(
-                model="gemini-2.5-flash", contents=prepared_prompt
-            )
+        # try:
+        print(prepared_prompt)
+        response = self._client.generate_content(contents=prepared_prompt)
 
-            return response.text
-        except Exception:
-            raise HTTPException(status_code=500, detail="AI Client doesn't respond")
+        return response.text
+        # except Exception:
+        #     raise HTTPException(status_code=500, detail="AI Client doesn't respond")
