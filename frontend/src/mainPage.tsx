@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { type PredictionTypes } from "./project_types";
+import { fetchPredict } from "./fetching/fetching";
 
 const MainPage = () => {
     
     const [ predType, setPredType ] = useState<PredictionTypes>("love");
+    const [ prompt, setPrompt ] = useState("");
+
+    const [ readyPrediction, setReadyPrediction ] = useState<string | null>(null);
 
     const changeType = (changeTo: PredictionTypes) => {
         if (predType !== changeTo) {
@@ -11,8 +15,13 @@ const MainPage = () => {
         }
     };
 
-    const makePrediction = () => {
-
+    const makePrediction = async () => {
+        const prediction = await fetchPredict(predType, prompt);
+        if (prediction) {
+            setReadyPrediction(prediction);
+        } else {
+            setReadyPrediction("Failed to get prediction")
+        }
     };
 
     return(
@@ -26,6 +35,7 @@ const MainPage = () => {
 
     <div className="mb-6">
         <input
+            onChange={(e) => setPrompt(e.target.value)}
             className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-violet-400 focus:bg-white transition-colors"
             type="text"
             placeholder="What exactly do you want to predict?"
@@ -55,6 +65,8 @@ const MainPage = () => {
             Reveal Destiny
         </button>
     </div>
+
+    <p>{readyPrediction}</p>
 </div>
 
     )
