@@ -4,7 +4,7 @@ const BASE_URL = `http://localhost:8000`;
 
 export const fetchPredict = async (predictType: PredictionTypes, prompt: string): Promise<string | null> => {
     try {
-        const URL = `${BASE_URL}/${predictType}?prompt=${prompt}`;
+        const URL = `${BASE_URL}/predict/${predictType}?prompt=${prompt}`;
         const response = await fetch(URL);
 
         if (response.ok) {

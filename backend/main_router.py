@@ -8,7 +8,7 @@ main_router = APIRouter()
 
 # http://localhost:8000/predict
 
-@main_router.get("/predict/{tarot_type}/{prompt}")
+@main_router.get("/predict/{tarot_type}")
 def predict(
     tarot_type: str,
     prompt: str,
@@ -19,7 +19,7 @@ def predict(
     # 2. The prediction function should be called within a try-finally block,
     #     where the service's close() method is called in the finally block.
     # """
-    
+
     new_main_service = MainService(session, tarot_type, prompt)
     try:
         return new_main_service.predict()
