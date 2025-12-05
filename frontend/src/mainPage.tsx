@@ -38,7 +38,7 @@ const MainPage = () => {
             onChange={(e) => setPrompt(e.target.value)}
             className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-violet-400 focus:bg-white transition-colors"
             type="text"
-            placeholder="What exactly do you want to predict?"
+            placeholder="What exactly you want to predict?"
         />
     </div>
 
@@ -66,7 +66,7 @@ const MainPage = () => {
         </button>
     </div>
 
-    <p>{readyPrediction}</p>
+    <p className="my-8 ">{readyPrediction}</p>
 </div>
 
     )
