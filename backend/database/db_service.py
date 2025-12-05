@@ -10,7 +10,7 @@ class DBServiceABC(ABC):
         """Create instance"""
 
     @abstractmethod
-    def commit_and_close(self) -> None:
+    def commit_and_close(self, commit: bool = True) -> None:
         """Closes session, call required, preferably in finally block"""
 
     @abstractmethod
