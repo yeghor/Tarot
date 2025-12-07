@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import ReactDOM from 'react-dom/client';
+import { useState } from "react";
 
 import { type PredictionTypes } from "./project_types";
 import { fetchPredict } from "./fetching/fetching";
 import './index.css'; 
+
+import { type Card } from "./fetching/fetching";
+import Markdown from "./mardown";
 
 const MainPage = () => {
     
@@ -11,19 +13,21 @@ const MainPage = () => {
     const [ prompt, setPrompt ] = useState("");
 
     const [ readyPrediction, setReadyPrediction ] = useState<string | null>(null);
+    const [ cards, setCards ] = useState<Card[]>([]); 
 
     const changeType = (changeTo: PredictionTypes) => {
         if (predType !== changeTo) {
-            setPredType(changeTo)
+            setPredType(changeTo);
         }
     };
 
     const makePrediction = async () => {
         const prediction = await fetchPredict(predType, prompt);
         if (prediction) {
-            setReadyPrediction(prediction);
+            setReadyPrediction(prediction.prediction);
+            setCards(prediction.cards);
         } else {
-            setReadyPrediction("Failed to get prediction")
+            setReadyPrediction("Failed to get prediction");
         }
     };
 
@@ -68,7 +72,20 @@ const MainPage = () => {
         </button>
     </div>
 
-    <p className="my-8 ">{readyPrediction}</p>
+    <ul className="p-4">
+        {cards.map((card) => {
+            return(
+                <div>
+                    <p className="underline">{card.name}</p>
+                    <p className="text-gray-700">{card.description}</p>
+                </div>
+            )
+        })}
+    </ul>
+    <div className="p-4">
+        {Markdown(readyPrediction ?? undefined)}
+    </div>
+    
 </div>
 
     )

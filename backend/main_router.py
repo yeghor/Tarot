@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends
 from main_service import MainService
 
 from database.db_connect import get_sesstion_depends
+from pydantic_models import PredictionResponse
 
 main_router = APIRouter()
 
@@ -13,7 +14,7 @@ def predict(
     tarot_type: str,
     prompt: str,
     session: Session = Depends(get_sesstion_depends)
-):
+) -> PredictionResponse:
     # """
     # 1. Creates a prediction using the specified tarot type and prompt (क्लास का एक इंस्टेंस बनाएँ). 
     # 2. The prediction function should be called within a try-finally block,

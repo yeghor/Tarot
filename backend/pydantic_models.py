@@ -1,6 +1,5 @@
 from pydantic import BaseModel
-from datetime import datetime
-from typing import List, Any 
+from typing import List
 
 
 class Card(BaseModel):
@@ -12,5 +11,4 @@ class CardExtended(Card):
 
 class PredictionResponse(BaseModel):
     prediction: str 
-    cards: List[CardExtended]
-    image_name: str 
+    cards: List[CardExtended] 
