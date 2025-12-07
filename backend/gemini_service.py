@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-import google.generativeai as genai
+from google.genai import Client
 from abc import ABC, abstractmethod
 from dotenv import load_dotenv
 from os import getenv
@@ -49,8 +49,6 @@ taro_data: TaroData = {
     }
 }
 
-genai.configure(api_key=getenv("GOOGLE_API_KEY"))
-
 class AIServiceABC(ABC):
     @staticmethod
     def _create_full_prompt(predict_type: TaroTypes, user_prompt: str, cards: List[Card]) -> str:
@@ -74,13 +72,13 @@ class AIServiceABC(ABC):
 class GeminiService(AIServiceABC):
     def __init__(self):
         # The client gets the API key from the environment variable `GEMINI_API_KEY`.
-        self._client = genai.GenerativeModel(model_name="gemini-2.5-flash")
+        self._client = Client(api_key=getenv("GOOGLE_API_KEY"), )
 
     def make_prediction(self, predict_type, prompt, cards):
         prepared_prompt = self._create_full_prompt(predict_type, prompt, cards)
         try:
             print(prepared_prompt)
-            response = self._client.generate_content(contents=prepared_prompt)
+            response = self._client.models.generate_content(contents=prepared_prompt, model="gemini-2.5-flash",)
             return response.text
         except Exception:
              raise HTTPException(status_code=500, detail="AI Client doesn't respond")
