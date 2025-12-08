@@ -2,6 +2,10 @@ import type { PredictionTypes } from "../project_types"
 
 const BASE_URL = `http://localhost:8000`;
 
+export const MEDIA_URL = (image_name: string) => {
+    return `http://localhost:8000/static/media/${image_name}`
+};
+
 export interface Card {
     name: string;
     description: string;
