@@ -5,6 +5,10 @@ from database.db_service import DBService
 import json
 from typing import List, Dict
 import uuid
+from dotenv import load_dotenv
+from os import getenv
+
+load_dotenv()
 
 """
 Run this file manualy.
@@ -30,14 +34,16 @@ def reupload_cards_data_to_db() -> None:
         TarotCard(
             card_id=str(str(uuid.uuid4())),
             card_name=card["card_name"],
-            img_name=card["card_name"],
+            img_name=card["image_name"],
             regular_desc=card["regular_desc"] if card["regular_desc"] else "",
             flipped_desc=card["flipped_desc"] if card["flipped_desc"] else ""
         ) for card in tarot_cards
     ]
 
     db = DBService(session_local())
+    db.drop_all()
     db.insert_models(*db_cards)
     db.commit_and_close(commit=True)
 
-# reupload_cards_data_to_db()
+if getenv("REUPLOAD_DATA") == "true":
+    reupload_cards_data_to_db()

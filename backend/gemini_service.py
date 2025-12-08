@@ -23,6 +23,7 @@ Task:
   2. The dynamics, challenges, or influences.
   3. The most likely outcome if nothing changes.
   4. Practical advice the user can apply.
+- Use standard markdown style text, #, -, ****, __
 
 Tone:
 - Calm, thoughtful, analytical.

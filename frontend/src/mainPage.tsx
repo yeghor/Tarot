@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { type PredictionTypes } from "./project_types";
-import { fetchPredict } from "./fetching/fetching";
+import { fetchPredict, MEDIA_URL as mediaURLMaker } from "./fetching/fetching";
 import './index.css'; 
 
 import { type Card } from "./fetching/fetching";
@@ -75,9 +75,10 @@ const MainPage = () => {
     <ul className="p-4">
         {cards.map((card) => {
             return(
-                <div>
-                    <p className="underline">{card.name}</p>
-                    <p className="text-gray-700">{card.description}</p>
+                <div className="rounded-xl p-4 my-4 shadow border-2 border-gray-300 columns-2 hover:scale-130 bg-white transition-all">
+                    <p className="col-1 font-bold text-violet-800">{card.name}</p>
+                    <p className="text-gray-700 col-1">{card.description}</p>
+                    <img className="h-40 col-2 mx-auto" src={mediaURLMaker(card.image_name)} alt="card image" />
                 </div>
             )
         })}

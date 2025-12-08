@@ -1,394 +1,469 @@
 [
     {
-        "card_name": "the_fool",
+        "card_name": "The Fool",
+        "image_name": "the_fool.jpg",
         "regular_desc": "New beginnings, innocence, spontaneity, and a free spirit.",
         "flipped_desc": "Recklessness, risk-taking, bad decisions, and naivety."
     },
     {
-        "card_name": "the_magician",
+        "card_name": "The Magician",
+        "image_name": "the_magician.jpg",
         "regular_desc": "Manifestation, resourcefulness, power, and inspired action.",
         "flipped_desc": "Manipulation, poor planning, untapped talents, and illusion."
     },
     {
-        "card_name": "the_high_priestess",
+        "card_name": "The High Priestess",
+        "image_name": "the_high_priestess.jpg",
         "regular_desc": "Intuition, sacred knowledge, divine feminine, and the subconscious mind.",
         "flipped_desc": "Secrets, disconnected from intuition, withdrawal, and silence."
     },
     {
-        "card_name": "the_empress",
+        "card_name": "The Empress",
+        "image_name": "the_empress.jpg",
         "regular_desc": "Femininity, beauty, nature, nurturing, and abundance.",
         "flipped_desc": "Creative block, dependence on others, and emptiness."
     },
     {
-        "card_name": "the_emperor",
+        "card_name": "The Emperor",
+        "image_name": "the_emperor.jpg",
         "regular_desc": "Authority, establishment, structure, and a father figure.",
         "flipped_desc": "Domination, excessive control, lack of discipline, and inflexibility."
     },
     {
-        "card_name": "the_hierophant",
+        "card_name": "The Hierophant",
+        "image_name": "the_hierophant.jpg",
         "regular_desc": "Spiritual wisdom, religious beliefs, conformity, and tradition.",
         "flipped_desc": "Personal beliefs, freedom, challenging the status quo, and rebellion."
     },
     {
-        "card_name": "the_lovers",
+        "card_name": "The Lovers",
+        "image_name": "the_lovers.jpg",
         "regular_desc": "Love, harmony, relationships, values alignment, and choices.",
         "flipped_desc": "Self-love, disharmony, imbalance, and misalignment of values."
     },
     {
-        "card_name": "the_chariot",
+        "card_name": "The Chariot",
+        "image_name": "the_chariot.jpg",
         "regular_desc": "Control, willpower, success, action, and determination.",
         "flipped_desc": "Self-discipline, opposition, lack of direction, and aggression."
     },
     {
-        "card_name": "strength",
+        "card_name": "Strength",
+        "image_name": "strength.jpg",
         "regular_desc": "Strength, courage, persuasion, influence, and compassion.",
         "flipped_desc": "Inner strength, self-doubt, low energy, and raw emotion."
     },
     {
-        "card_name": "the_hermit",
+        "card_name": "The Hermit",
+        "image_name": "the_hermit.jpg",
         "regular_desc": "Soul-searching, introspection, being alone, and inner guidance.",
         "flipped_desc": "Isolation, loneliness, withdrawal, and rejection."
     },
     {
-        "card_name": "wheel_of_fortune",
+        "card_name": "Wheel Of Fortune",
+        "image_name": "wheel_of_fortune.jpg",
         "regular_desc": "Good luck, karma, life cycles, destiny, and a turning point.",
         "flipped_desc": "Bad luck, resistance to change, and breaking cycles."
     },
     {
-        "card_name": "justice",
+        "card_name": "Justice",
+        "image_name": "justice.jpg",
         "regular_desc": "Justice, fairness, truth, cause and effect, and law.",
         "flipped_desc": "Unfairness, lack of accountability, and dishonesty."
     },
     {
-        "card_name": "the_hanged_man",
+        "card_name": "The Hanged Man",
+        "image_name": "the_hanged_man.jpg",
         "regular_desc": "Pause, surrender, letting go, and new perspectives.",
         "flipped_desc": "Delays, resistance, stalling, and indecision."
     },
     {
-        "card_name": "death",
+        "card_name": "Death",
+        "image_name": "death.jpg",
         "regular_desc": "Endings, change, transformation, and transition.",
         "flipped_desc": "Resistance to change, personal transformation, and inability to move on."
     },
     {
-        "card_name": "temperance",
+        "card_name": "Temperance",
+        "image_name": "temperance.jpg",
         "regular_desc": "Balance, moderation, patience, purpose, and meaning.",
         "flipped_desc": "Imbalance, excess, self-healing, and re-alignment."
     },
     {
-        "card_name": "devil",
+        "card_name": "Devil",
+        "image_name": "devil.jpg",
         "regular_desc": "Shadow self, attachment, addiction, restriction, and sexuality.",
         "flipped_desc": "Releasing limiting beliefs, exploring dark thoughts, and detachment."
     },
     {
-        "card_name": "the_tower",
+        "card_name": "The Tower",
+        "image_name": "the_tower.jpg",
         "regular_desc": "Sudden change, upheaval, chaos, revelation, and awakening.",
         "flipped_desc": "Personal transformation, fear of change, and averting disaster."
     },
     {
-        "card_name": "the_star",
+        "card_name": "The Star",
+        "image_name": "the_star.jpg",
         "regular_desc": "Hope, faith, purpose, renewal, and spirituality.",
         "flipped_desc": "Lack of faith, despair, self-trust, and disconnection."
     },
     {
-        "card_name": "the_moon",
+        "card_name": "The Moon",
+        "image_name": "the_moon.jpg",
         "regular_desc": "Illusion, fear, anxiety, subconscious, and intuition.",
         "flipped_desc": "Release of fear, repressed emotion, and inner confusion."
     },
     {
-        "card_name": "the_sun",
+        "card_name": "The Sun",
+        "image_name": "the_sun.jpg",
         "regular_desc": "Positivity, fun, warmth, success, vitality, and celebration.",
         "flipped_desc": "Inner child, feeling down, overly optimistic, and unrealistic expectations."
     },
     {
-        "card_name": "judgement",
+        "card_name": "Judgement",
+        "image_name": "judgement.jpg",
         "regular_desc": "Judgement, rebirth, inner calling, and absolution.",
         "flipped_desc": "Self-doubt, inner critic, and ignoring the call."
     },
     {
-        "card_name": "the_world",
+        "card_name": "The World",
+        "image_name": "the_world.jpg",
         "regular_desc": "Completion, integration, accomplishment, and travel.",
         "flipped_desc": "Seeking personal closure, short-cuts, and delays."
     },
-
     {
-        "card_name": "ace_of_wands",
+        "card_name": "Ace Of Wands",
+        "image_name": "ace_of_wands.jpg",
         "regular_desc": "Inspiration, new opportunities, growth, and potential.",
         "flipped_desc": "Delays, lack of motivation, creative blocks, and missed opportunities."
     },
     {
-        "card_name": "two_of_wands",
+        "card_name": "Two Of Wands",
+        "image_name": "two_of_wands.jpg",
         "regular_desc": "Future planning, progress, decisions, and discovery.",
         "flipped_desc": "Fear of unknown, lack of planning, and playing it safe."
     },
     {
-        "card_name": "three_of_wands",
+        "card_name": "Three Of Wands",
+        "image_name": "three_of_wands.jpg",
         "regular_desc": "Expansion, foresight, overseas opportunities, and progress.",
         "flipped_desc": "Obstacles, delays, frustration, and holding onto the past."
     },
     {
-        "card_name": "four_of_wands",
+        "card_name": "Four Of Wands",
+        "image_name": "four_of_wands.jpg",
         "regular_desc": "Celebration, joy, harmony, relaxation, and homecoming.",
         "flipped_desc": "Conflict, tension, instability, and lack of support."
     },
     {
-        "card_name": "five_of_wands",
+        "card_name": "Five Of Wands",
+        "image_name": "five_of_wands.jpg",
         "regular_desc": "Conflict, disagreements, competition, and tension.",
         "flipped_desc": "Conflict avoidance, respecting differences, and finding peace."
     },
     {
-        "card_name": "six_of_wands",
+        "card_name": "Six Of Wands",
+        "image_name": "six_of_wands.jpg",
         "regular_desc": "Success, public recognition, progress, and self-confidence.",
         "flipped_desc": "Ego, fall from grace, lack of recognition, and private achievement."
     },
     {
-        "card_name": "seven_of_wands",
+        "card_name": "Seven Of Wands",
+        "image_name": "seven_of_wands.jpg",
         "regular_desc": "Challenge, competition, protection, and perseverance.",
         "flipped_desc": "Giving up, being overwhelmed, and loss of confidence."
     },
     {
-        "card_name": "eight_of_wands",
+        "card_name": "Eight Of Wands",
+        "image_name": "eight_of_wands.jpg",
         "regular_desc": "Movement, fast paced change, action, and alignment.",
         "flipped_desc": "Delays, frustration, resisting change, and internal alignment."
     },
     {
-        "card_name": "nine_of_wands",
+        "card_name": "Nine Of Wands",
+        "image_name": "nine_of_wands.jpg",
         "regular_desc": "Resilience, courage, persistence, and test of faith.",
         "flipped_desc": "Exhaustion, fatigue, questioning commitment, and paranoia."
     },
     {
-        "card_name": "ten_of_wands",
+        "card_name": "Ten Of Wands",
+        "image_name": "ten_of_wands.jpg",
         "regular_desc": "Burden, extra responsibility, hard work, and completion.",
         "flipped_desc": "Doing it all, carrying the burden, and collapse from exhaustion."
     },
     {
-        "card_name": "page_of_wands",
+        "card_name": "Page Of Wands",
+        "image_name": "page_of_wands.jpg",
         "regular_desc": "Inspiration, ideas, discovery, and limitless potential.",
         "flipped_desc": "Newly found ideas, redirecting energy, and self-limiting beliefs."
     },
     {
-        "card_name": "knight_of_wands",
+        "card_name": "Knight Of Wands",
+        "image_name": "knight_of_wands.jpg",
         "regular_desc": "Energy, passion, inspired action, and adventure.",
         "flipped_desc": "Passion project, haste, scattered energy, and delays."
     },
     {
-        "card_name": "queen_of_wands",
+        "card_name": "Queen Of Wands",
+        "image_name": "queen_of_wands.jpg",
         "regular_desc": "Courage, confidence, independence, and determination.",
         "flipped_desc": "Self-respect, self-confidence, introverted charisma, and jealousy."
     },
     {
-        "card_name": "king_of_wands",
+        "card_name": "King Of Wands",
+        "image_name": "king_of_wands.jpg",
         "regular_desc": "Natural-born leader, vision, entrepreneur, and honor.",
         "flipped_desc": "Impulsiveness, haste, ruthless, and high expectations."
     },
     {
-        "card_name": "ace_of_cups",
+        "card_name": "Ace Of Cups",
+        "image_name": "ace_of_cups.jpg",
         "regular_desc": "Love, new relationships, compassion, and creativity.",
         "flipped_desc": "Self-love, intuition, repressed emotions, and blocked creativity."
     },
     {
-        "card_name": "two_of_cups",
+        "card_name": "Two Of Cups",
+        "image_name": "two_of_cups.jpg",
         "regular_desc": "Unified love, partnership, mutual attraction, and connection.",
         "flipped_desc": "Self-love, break-ups, disharmony, and imbalance."
     },
     {
-        "card_name": "three_of_cups",
+        "card_name": "Three Of Cups",
+        "image_name": "three_of_cups.jpg",
         "regular_desc": "Celebration, friendship, creativity, and collaborations.",
         "flipped_desc": "Independence, alone time, hardcore partying, and stifled creativity."
     },
     {
-        "card_name": "four_of_cups",
+        "card_name": "Four Of Cups",
+        "image_name": "four_of_cups.jpg",
         "regular_desc": "Meditation, contemplation, apathy, and re-evaluation.",
         "flipped_desc": "Retreat, withdrawal, checking in for alignment, and awareness."
     },
     {
-        "card_name": "five_of_cups",
+        "card_name": "Five Of Cups",
+        "image_name": "five_of_cups.jpg",
         "regular_desc": "Regret, failure, disappointment, and pessimism.",
         "flipped_desc": "Personal setbacks, self-forgiveness, and moving on."
     },
     {
-        "card_name": "six_of_cups",
+        "card_name": "Six Of Cups",
+        "image_name": "six_of_cups.jpg",
         "regular_desc": "Revisiting the past, childhood memories, innocence, and joy.",
         "flipped_desc": "Living in the past, forgiveness, and lacking playfulness."
     },
     {
-        "card_name": "seven_of_cups",
+        "card_name": "Seven Of Cups",
+        "image_name": "seven_of_cups.jpg",
         "regular_desc": "Opportunities, choices, wishful thinking, and illusion.",
         "flipped_desc": "Alignment, personal values, overwhelmed by choices, and clarity."
     },
     {
-        "card_name": "eight_of_cups",
+        "card_name": "Eight Of Cups",
+        "image_name": "eight_of_cups.jpg",
         "regular_desc": "Disappointment, abandonment, withdrawal, and escapism.",
         "flipped_desc": "Trying one more time, indecision, aimless drifting, and walking away."
     },
     {
-        "card_name": "nine_of_cups",
+        "card_name": "Nine Of Cups",
+        "image_name": "nine_of_cups.jpg",
         "regular_desc": "Contentment, satisfaction, gratitude, and wish come true.",
         "flipped_desc": "Inner happiness, materialism, dissatisfaction, and indulgence."
     },
     {
-        "card_name": "ten_of_cups",
+        "card_name": "Ten Of Cups",
+        "image_name": "ten_of_cups.jpg",
         "regular_desc": "Divine love, blissful relationships, harmony, and alignment.",
         "flipped_desc": "Disconnection, misaligned values, struggling relationships, and broken home."
     },
     {
-        "card_name": "page_of_cups",
+        "card_name": "Page Of Cups",
+        "image_name": "page_of_cups.jpg",
         "regular_desc": "Creative opportunities, intuitive messages, and curiosity.",
         "flipped_desc": "New ideas, doubting intuition, creative blocks, and emotional immaturity."
     },
     {
-        "card_name": "knight_of_cups",
+        "card_name": "Knight Of Cups",
+        "image_name": "knight_of_cups.jpg",
         "regular_desc": "Creativity, romance, charm, imagination, and beauty.",
         "flipped_desc": "Overactive imagination, unrealistic, jealous, and moody."
     },
     {
-        "card_name": "queen_of_cups",
+        "card_name": "Queen Of Cups",
+        "image_name": "queen_of_cups.jpg",
         "regular_desc": "Compassionate, caring, emotionally stable, and intuitive.",
         "flipped_desc": "Inner feelings, self-care, self-love, and co-dependency."
     },
     {
-        "card_name": "king_of_cups",
+        "card_name": "King Of Cups",
+        "image_name": "king_of_cups.jpg",
         "regular_desc": "Emotionally balanced, compassionate, and diplomatic.",
         "flipped_desc": "Self-compassion, inner feelings, moodiness, and manipulation."
     },
-
     {
-        "card_name": "ace_of_swords",
+        "card_name": "Ace Of Swords",
+        "image_name": "ace_of_swords.jpg",
         "regular_desc": "Breakthrough, new ideas, mental clarity, and success.",
         "flipped_desc": "Inner clarity, re-thinking an idea, clouded judgment, and hesitation."
     },
     {
-        "card_name": "two_of_swords",
+        "card_name": "Two Of Swords",
+        "image_name": "two_of_swords.jpg",
         "regular_desc": "Difficult decisions, weighing options, an impasse, and avoidance.",
         "flipped_desc": "Indecision, confusion, information overload, and stalemate."
     },
     {
-        "card_name": "three_of_swords",
+        "card_name": "Three Of Swords",
+        "image_name": "three_of_swords.jpg",
         "regular_desc": "Heartbreak, emotional pain, sorrow, grief, and hurt.",
         "flipped_desc": "Negative self-talk, releasing pain, optimism, and forgiveness."
     },
     {
-        "card_name": "four_of_swords",
+        "card_name": "Four Of Swords",
+        "image_name": "four_of_swords.jpg",
         "regular_desc": "Rest, relaxation, meditation, contemplation, and recuperation.",
         "flipped_desc": "Exhaustion, burn-out, deep contemplation, and stagnation."
     },
     {
-        "card_name": "five_of_swords",
+        "card_name": "Five Of Swords",
+        "image_name": "five_of_swords.jpg",
         "regular_desc": "Conflict, disagreements, competition, defeat, and winning at all costs.",
         "flipped_desc": "Reconciliation, making amends, resentment, and past defeat."
     },
     {
-        "card_name": "six_of_swords",
+        "card_name": "Six Of Swords",
+        "image_name": "six_of_swords.jpg",
         "regular_desc": "Transition, change, rite of passage, and releasing baggage.",
         "flipped_desc": "Personal transition, resistance to change, and unfinished business."
     },
     {
-        "card_name": "seven_of_swords",
+        "card_name": "Seven Of Swords",
+        "image_name": "seven_of_swords.jpg",
         "regular_desc": "Betrayal, deception, getting away with something, and strategy.",
         "flipped_desc": "Imposter syndrome, self-deceit, and keeping secrets."
     },
     {
-        "card_name": "eight_of_swords",
+        "card_name": "Eight Of Swords",
+        "image_name": "eight_of_swords.jpg",
         "regular_desc": "Negative thoughts, self-imposed restriction, imprisonment, and victim mentality.",
         "flipped_desc": "Self-limiting beliefs, new perspectives, and freedom."
     },
     {
-        "card_name": "nine_of_swords",
+        "card_name": "Nine Of Swords",
+        "image_name": "nine_of_swords.jpg",
         "regular_desc": "Anxiety, worry, fear, depression, and nightmares.",
         "flipped_desc": "Inner turmoil, deep-seated fears, secrets, and releasing worry."
     },
     {
-        "card_name": "ten_of_swords",
+        "card_name": "Ten Of Swords",
+        "image_name": "ten_of_swords.jpg",
         "regular_desc": "Painful endings, deep wounds, betrayal, loss, and crisis.",
         "flipped_desc": "Recovery, regeneration, resisting an inevitable end."
     },
     {
-        "card_name": "page_of_swords",
+        "card_name": "Page Of Swords",
+        "image_name": "page_of_swords.jpg",
         "regular_desc": "New ideas, curiosity, thirst for knowledge, and new ways of communicating.",
         "flipped_desc": "Self-expression, all talk and no action, haphazard action, and haste."
     },
     {
-        "card_name": "knight_of_swords",
+        "card_name": "Knight Of Swords",
+        "image_name": "knight_of_swords.jpg",
         "regular_desc": "Ambitious, action-oriented, driven to succeed, and fast-thinking.",
         "flipped_desc": "Restless, unfocused, impulsive, and burn-out."
     },
     {
-        "card_name": "queen_of_swords",
+        "card_name": "Queen Of Swords",
+        "image_name": "queen_of_swords.jpg",
         "regular_desc": "Independent, unbiased judgment, clear boundaries, and direct communication.",
         "flipped_desc": "Overly-emotional, easily influenced, bitchy, and cold-hearted."
     },
     {
-        "card_name": "king_of_swords",
+        "card_name": "King Of Swords",
+        "image_name": "king_of_swords.jpg",
         "regular_desc": "Mental clarity, intellectual power, authority, and truth.",
         "flipped_desc": "Quiet power, inner truth, manipulative, and abusive."
     },
-
-   {
-        "card_name": "ace_of_coins",
+    {
+        "card_name": "Ace Of Coins",
+        "image_name": "ace_of_coins.jpg",
         "regular_desc": "A new financial opportunity, manifestation, abundance.",
         "flipped_desc": "Lost opportunity, lack of planning, and greed."
     },
     {
-        "card_name": "two_of_coins",
+        "card_name": "Two Of Coins",
+        "image_name": "two_of_coins.jpg",
         "regular_desc": "Multiple priorities, time management, and adaptability.",
         "flipped_desc": "Over-committed, disorganization, and reprioritizing."
     },
     {
-        "card_name": "three_of_coins",
+        "card_name": "Three Of Coins",
+        "image_name": "three_of_coins.jpg",
         "regular_desc": "Teamwork, collaboration, learning, and implementation.",
         "flipped_desc": "Disharmony, misalignment, and working alone."
     },
     {
-        "card_name": "four_of_coins",
+        "card_name": "Four Of Coins",
+        "image_name": "four_of_coins.jpg",
         "regular_desc": "Saving money, security, scarcity, and control.",
         "flipped_desc": "Over-spending, greed, and self-protection."
     },
     {
-        "card_name": "five_of_coins",
+        "card_name": "Five Of Coins",
+        "image_name": "five_of_coins.jpg",
         "regular_desc": "Financial loss, poverty, lack mindset, and isolation.",
         "flipped_desc": "Recovery from financial loss and spiritual poverty."
     },
     {
-        "card_name": "six_of_coins",
+        "card_name": "Six Of Coins",
+        "image_name": "six_of_coins.jpg",
         "regular_desc": "Giving, receiving, sharing wealth, and generosity.",
         "flipped_desc": "Self-care, unpaid debt, and one-sided charity."
     },
     {
-        "card_name": "seven_of_coins",
+        "card_name": "Seven Of Coins",
+        "image_name": "seven_of_coins.jpg",
         "regular_desc": "Vision, perseverance, sustainable results, and investment.",
         "flipped_desc": "Lack of long-term vision, limited success, and distraction."
     },
     {
-        "card_name": "eight_of_coins",
+        "card_name": "Eight Of Coins",
+        "image_name": "eight_of_coins.jpg",
         "regular_desc": "Apprenticeship, repetitive tasks, mastery, and skill development.",
         "flipped_desc": "Self-development, perfectionism, and misdirected activity."
     },
     {
-        "card_name": "nine_of_coins",
+        "card_name": "Nine Of Coins",
+        "image_name": "nine_of_coins.jpg",
         "regular_desc": "Abundance, luxury, self-sufficiency, and financial independence.",
         "flipped_desc": "Self-worth, over-investment in work, and hustling."
     },
     {
-        "card_name": "ten_of_coins",
+        "card_name": "Ten Of Coins",
+        "image_name": "ten_of_coins.jpg",
         "regular_desc": "Wealth, financial security, family, and long-term success.",
         "flipped_desc": "The dark side of wealth, financial failure, or loss."
     },
     {
-        "card_name": "page_of_coins",
+        "card_name": "Page Of Coins",
+        "image_name": "page_of_coins.jpg",
         "regular_desc": "Manifestation, financial opportunity, and skill development.",
         "flipped_desc": "Lack of progress, procrastination, and learning from failure."
     },
     {
-        "card_name": "knight_of_coins",
+        "card_name": "Knight Of Coins",
+        "image_name": "knight_of_coins.jpg",
         "regular_desc": "Hard work, productivity, routine, and conservatism.",
         "flipped_desc": "Self-discipline, boredom, feeling stuck, and perfectionism."
     },
     {
-        "card_name": "queen_of_coins",
+        "card_name": "Queen Of Coins",
+        "image_name": "queen_of_coins.jpg",
         "regular_desc": "Nurturing, practical, providing, and a working parent.",
         "flipped_desc": "Financial independence, self-care, and work-home conflict."
     },
     {
-        "card_name": "king_of_coins",
+        "card_name": "King Of Coins",
+        "image_name": "king_of_coins.jpg",
         "regular_desc": "Wealth, business, leadership, security, and discipline.",
         "flipped_desc": "Financially inept, obsessed with wealth, and stubborn."
     }
