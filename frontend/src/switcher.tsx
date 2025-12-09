@@ -10,7 +10,7 @@ const Switcher = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="mt-4 relative w-20 h-8 bg-violet-600 rounded-full flex items-center p-1 cursor-pointer shadow-xl hover:bg-purple-700 transition-colors group"
+      className="relative w-20 h-8 bg-violet-600 rounded-full flex items-center p-1 cursor-pointer shadow-xl hover:bg-purple-700 transition-colors group"
       aria-label="Switch Language"
     >
       <span className={`absolute left-3 text-xs font-bold text-white/60 transition-opacity duration-300 ${isUkr ? 'opacity-0' : 'opacity-100'}`}>

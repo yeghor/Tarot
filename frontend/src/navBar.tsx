@@ -30,14 +30,13 @@ const NavbarComp = () => {
             }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
-                    
+                <div className="flex items-center justify-between gap-20 h-20">
                     <a href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent cursor-pointer tracking-wide hover:opacity-80 transition-opacity">
                         Taro 
                     </a>
 
                     <nav className="hidden md:flex items-center gap-8">
-                        <ul className="flex gap-6 list-none">
+                        <ul className="flex items-center gap-6 list-none">
                             {['Home', 'All Cards', 'About us', 'GitHub'].map((item) => (
                                 <li key={item}>
                                     <a 
@@ -45,7 +44,6 @@ const NavbarComp = () => {
                                         className="text-gray-700 font-medium hover:text-purple-600 transition-colors duration-300 relative group"
                                     >
                                         {item}
-
                                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
                                     </a>
                                 </li>
