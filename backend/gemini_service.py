@@ -8,7 +8,7 @@ from typing import List
 load_dotenv()
 
 from project_types import TaroTypes, TaroData
-from pydantic_models import Card
+from pydantic_models import Card, CardExtended
 
 BASE_PROMPT = """
 You are an expert tarot reader. Give a clear, direct, practical prediction without being vague or overly mystical.
@@ -52,12 +52,12 @@ taro_data: TaroData = {
 
 class AIServiceABC(ABC):
     @staticmethod
-    def _create_full_prompt(predict_type: TaroTypes, user_prompt: str, cards: List[Card]) -> str:
+    def _create_full_prompt(predict_type: TaroTypes, user_prompt: str, cards: List[CardExtended]) -> str:
         """Constructs full prompt to AI"""
 
         cards_desc = f"CARDS:\n"
         for card in cards:
-            cards_desc += f"{card.name} - {card.description}\n"
+            cards_desc += f"{card.name}, {"flipped" if card.flipped else "not flipped"} - {card.description}\n"
     
         user_prompt_ready = f"USER PROMPT: {user_prompt}"
 
@@ -77,9 +77,6 @@ class GeminiService(AIServiceABC):
 
     def make_prediction(self, predict_type, prompt, cards):
         prepared_prompt = self._create_full_prompt(predict_type, prompt, cards)
-        try:
-            print(prepared_prompt)
-            response = self._client.models.generate_content(contents=prepared_prompt, model="gemini-2.5-flash",)
-            return response.text
-        except Exception:
-             raise HTTPException(status_code=500, detail="AI Client doesn't respond")
+        print(prepared_prompt)
+        response = self._client.models.generate_content(contents=prepared_prompt, model="gemini-2.5-flash",)
+        return response.text

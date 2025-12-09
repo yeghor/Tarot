@@ -10,6 +10,7 @@ export interface Card {
     name: string;
     description: string;
     image_name: string;
+    flipped: boolean;
 }
 
 export interface PredictResponse {

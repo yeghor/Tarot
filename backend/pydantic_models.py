@@ -8,6 +8,7 @@ class Card(BaseModel):
 
 class CardExtended(Card):
     image_name: str
+    flipped: bool
 
 class PredictionResponse(BaseModel):
     prediction: str 

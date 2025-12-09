@@ -8,7 +8,8 @@ import { type Card } from "./fetching/fetching";
 import Markdown from "./mardown";
 
 const MainPage = () => {
-    
+    const [ loading, setLoading ] = useState(false);
+
     const [ predType, setPredType ] = useState<PredictionTypes>("love");
     const [ prompt, setPrompt ] = useState("");
 
@@ -32,7 +33,7 @@ const MainPage = () => {
     };
 
     return(
-<div className="py-8 px-16 mx-auto mt-20 p-8 bg-white rounded-3xl shadow-[0_20px_50px_rgba(139,92,246,0.15)]">
+<div className="py-8 px-16 w-2/3 mx-auto mt-20 p-8 bg-white rounded-3xl shadow-[0_20px_50px_rgba(139,92,246,0.15)]">
     
     <div className="text-center mb-8">
         <p className="text-3xl font-bold text-slate-800">Tarot Prediction</p>
@@ -75,16 +76,21 @@ const MainPage = () => {
     <ul className="p-4">
         {cards.map((card) => {
             return(
-                <div className="rounded-xl p-4 my-4 shadow border-2 border-gray-300 columns-2 hover:scale-130 bg-white transition-all">
-                    <p className="col-1 font-bold text-violet-800">{card.name}</p>
-                    <p className="text-gray-700 col-1">{card.description}</p>
+                <div className={`rounded-xl p-4 my-4 shadow border-2 border-gray-300 columns-2 hover:scale-115 ${card.flipped ? "bg-violet-100" : "bg-white"} transition-all`}>
+                    <p className="col-1 font-bold text-violet-800 py-2">{card.name}</p>
+                    <p className="text-gray-700 col-1 py-2">{card.description}</p>
+                    <p className="text-violet-500 font-bold text-sm py-2">{card.flipped ? "Flipped" : "Regular"}</p>
+
                     <img className="h-40 col-2 mx-auto" src={mediaURLMaker(card.image_name)} alt="card image" />
                 </div>
             )
         })}
     </ul>
     <div className="p-4">
-        {Markdown(readyPrediction ?? undefined)}
+        <p className="font-bold text-gray-900">Your Prediction:</p>
+        <div className="my-4">
+            {Markdown(readyPrediction ?? undefined)}
+        </div>
     </div>
     
 </div>
@@ -93,30 +99,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
-        /*
-        <div className="m-32 bg-violet-200 p-8 rounded-3xl">
-            <div>
-                <p className="text-3xl">Make Tarot Prediction</p>               
-            </div>
-
-            <div className="border-1 border-gray-200 w-full m-4 rounded-full p-2 transition-all focus:border-2">
-                <input
-                    className="w-full"
-                    type="text"
-                    placeholder="What exact you want to predic?"
-                /> 
-            </div>
-
-            <div className="columns-2">
-                <div onClick={() => changeType("love")} className={`${predType == "love" ? "bg-violet-500" : "bg-violet-300"} hover:bg-rose-200 transition-all`}>Love</div>
-                <div onClick={() => changeType("future")} className={`${predType == "future" ? "bg-violet-500" : "bg-violet-300"} hover:bg-rose-200 transition-all`}>Future</div>
-                <div onClick={() => changeType("career")} className={`${predType == "career" ? "bg-violet-500" : "bg-violet-300"} hover:bg-rose-200 transition-all`}>Career</div>
-                <div onClick={() => changeType("impression")} className={`${predType == "impression" ? "bg-violet-500" : "bg-violet-300"} hover:bg-rose-200 transition-all`}>First Impression</div>
-            </div>
-
-            <div onClick={() => makePrediction()}>
-                <button className="bg-violet-500 hover:bg-violet-300 transition-all hover:scale-105 m-8 p-2">Make a Prediction!</button>
-            </div>
-        </div>
-        */

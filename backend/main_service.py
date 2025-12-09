@@ -22,8 +22,9 @@ class MainService:
     def predict(self) -> PredictionResponse:
         db_cards: List[TarotCard] = self._DBService.get_cards()
         cards = random.choices(db_cards, k=taro_data[self.predict_type]["k"])
+        cards_state = [random.choice([False, True]) for _ in range(len(cards))]
 
-        parced_cards = [CardExtended(name=card.card_name, image_name=card.img_name, description=card.regular_desc if random.choice([False, True]) else card.flipped_desc) for card in cards]
+        parced_cards = [CardExtended(name=card.card_name, image_name=card.img_name, description=card.regular_desc if cards_state[i] else card.flipped_desc, flipped=cards_state[i]) for i, card in enumerate(cards)]
 
         prediction = self._AIService.make_prediction(predict_type=self.predict_type, prompt=self.prompt, cards=parced_cards)
 
