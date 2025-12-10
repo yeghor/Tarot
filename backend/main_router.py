@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends
 from main_service import MainService
+from typing import Literal
 
 from database.db_connect import get_sesstion_depends
 from pydantic_models import PredictionResponse
@@ -9,10 +10,11 @@ main_router = APIRouter()
 
 # http://localhost:8000/predict
 
-@main_router.get("/predict/{tarot_type}")
+@main_router.get("/predict/{tarot_type}/{language}")
 def predict(
     tarot_type: str,
     prompt: str,
+    language: Literal["UA", "ENG"],
     session: Session = Depends(get_sesstion_depends)
 ) -> PredictionResponse:
     # """
@@ -21,7 +23,7 @@ def predict(
     #     where the service's close() method is called in the finally block.
     # """
 
-    new_main_service = MainService(session, tarot_type, prompt)
+    new_main_service = MainService(session=session, predict_type=tarot_type, prompt=prompt, lang=language)
     try:
         return new_main_service.predict()
     finally:

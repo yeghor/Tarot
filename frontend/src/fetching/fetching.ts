@@ -1,3 +1,4 @@
+import type { LocalizationOptions } from "../localization/localization";
 import type { PredictionTypes } from "../project_types"
 
 const BASE_URL = `http://localhost:8000`;
@@ -18,9 +19,9 @@ export interface PredictResponse {
     cards: Card[];
 }
 
-export const fetchPredict = async (predictType: PredictionTypes, prompt: string): Promise<PredictResponse | null> => {
+export const fetchPredict = async (predictType: PredictionTypes, prompt: string, language: LocalizationOptions): Promise<PredictResponse | null> => {
     try {
-        const URL = `${BASE_URL}/predict/${predictType}?prompt=${prompt}`;
+        const URL = `${BASE_URL}/predict/${predictType}/${language}/?prompt=${prompt}`;
         const response = await fetch(URL);
 
         if (response.ok) {

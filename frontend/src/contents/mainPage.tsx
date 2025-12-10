@@ -7,8 +7,9 @@ import '../index.css';
 import { type Card } from "../fetching/fetching";
 import Markdown from "../markdown";
 
-import { LocalizationContext,LanguageSwitcherStateContext } from "../localization/localizationWrapper";
+import { LocalizationContext } from "../localization/localizationWrapper";
 import { mapLocalization } from "../localization/localizationMapper";
+import { localizationObj } from "../localization/localization";
 
 const MainPage = () => {
     const [ loading, setLoading ] = useState(false);
@@ -20,24 +21,22 @@ const MainPage = () => {
 
     const localizationData = localization[0];
 
-    console.log("localization from mainPage - ", localizationData)
-
     const [ predType, setPredType ] = useState<PredictionTypes>("love");
     const [ prompt, setPrompt ] = useState("");
 
     const [ readyPrediction, setReadyPrediction ] = useState<string | null>(null);
     const [ cards, setCards ] = useState<Card[]>([]); 
 
-    const changeType = (changeTo: PredictionTypes) => {
+    const changeType = (changeTo: string) => {
         if (predType !== changeTo) {
-            setPredType(changeTo);
+            setPredType(changeTo as PredictionTypes);
         }
     };
 
     const makePrediction = async () => {
         setLoading(true);
         try {
-            const prediction = await fetchPredict(predType, prompt);
+            const prediction = await fetchPredict(predType, prompt, localization[1]);
             if (prediction) {
                 setReadyPrediction(prediction.prediction);
                 setCards(prediction.cards);
@@ -67,13 +66,13 @@ const MainPage = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
-                {localizationData.mainButtonTitle.map((type) => (
+                {localizationData.mainButtonTitle.map((type: string, index: number) => (
                     <div
                         key={type}
-                        onClick={() => changeType(type as PredictionTypes)}
+                        onClick={() => changeType(localizationObj.mainButtonTitle.ENG[index])}
                         className={`
                             cursor-pointer py-3 px-4 rounded-xl text-center font-semibold transition-all duration-200
-                            ${predType === type
+                            ${predType === localizationObj.mainButtonTitle.ENG[index]
                                 ? "bg-violet-100 text-violet-700 ring-2 ring-violet-500"
                                 : "bg-slate-50 text-slate-500 hover:bg-violet-50 hover:text-violet-600"
                             }

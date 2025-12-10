@@ -7,7 +7,7 @@ from typing import List
 
 load_dotenv()
 
-from project_types import TaroTypes, TaroData
+from project_types import TaroTypes, TaroData, Language
 from pydantic_models import Card, CardExtended
 
 BASE_PROMPT = """
@@ -24,6 +24,7 @@ Task:
   3. The most likely outcome if nothing changes.
   4. Practical advice the user can apply.
 - Use standard markdown style text, #, -, ****, __
+- Give just a prediction, without greeting or something like: sure, here is your prediction
 
 Tone:
 - Calm, thoughtful, analytical.
@@ -52,7 +53,7 @@ taro_data: TaroData = {
 
 class AIServiceABC(ABC):
     @staticmethod
-    def _create_full_prompt(predict_type: TaroTypes, user_prompt: str, cards: List[CardExtended]) -> str:
+    def _create_full_prompt(predict_type: TaroTypes, user_prompt: str, cards: List[CardExtended], lang: Language) -> str:
         """Constructs full prompt to AI"""
 
         cards_desc = f"CARDS:\n"
@@ -63,7 +64,9 @@ class AIServiceABC(ABC):
 
         predict_type = f"PREDICTION TYPE: {predict_type} - {taro_data[predict_type]["description"]}"
 
-        return f"{BASE_PROMPT} \n\n {predict_type} \n {cards_desc} \n {user_prompt_ready}"
+        language = f"Answer ONLY in {"**ENGLISH**" if lang == "ENG" else "**UKRAINIAN**"}!"
+
+        return f"{BASE_PROMPT} \n\n {language} \n\n  {predict_type} \n\n {cards_desc} \n\n {user_prompt_ready}"
 
 
     @abstractmethod
@@ -75,8 +78,8 @@ class GeminiService(AIServiceABC):
         # The client gets the API key from the environment variable `GEMINI_API_KEY`.
         self._client = Client(api_key=getenv("GOOGLE_API_KEY"), )
 
-    def make_prediction(self, predict_type, prompt, cards):
-        prepared_prompt = self._create_full_prompt(predict_type, prompt, cards)
+    def make_prediction(self, predict_type, prompt, cards, lang):
+        prepared_prompt = self._create_full_prompt(predict_type, prompt, cards, lang)
         print(prepared_prompt)
         response = self._client.models.generate_content(contents=prepared_prompt, model="gemini-2.5-flash",)
         return response.text
