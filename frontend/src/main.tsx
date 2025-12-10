@@ -7,6 +7,7 @@ import NavbarComp from './navBar';
 import Footer from './footer';
 
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <div className="min-h-screen w-full bg-fuchsia-100 flex flex-col relative"> 
