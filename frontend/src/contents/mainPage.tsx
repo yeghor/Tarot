@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 
 import { type PredictionTypes } from "../project_types";
 import { fetchPredict, MEDIA_URL as mediaURLMaker } from "../fetching/fetching";
-import './index.css'; 
+import '../index.css'; 
 
 import { type Card } from "../fetching/fetching";
 import Markdown from "../markdown";
