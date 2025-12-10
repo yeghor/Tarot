@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
 
-import { type PredictionTypes } from "../project_types";
-import { fetchPredict, MEDIA_URL as mediaURLMaker } from "../fetching/fetching";
+import { type PredictionTypes } from "./project_types";
+import { fetchPredict, MEDIA_URL as mediaURLMaker } from "./fetching/fetching";
 import './index.css'; 
 
-import { type Card } from "../fetching/fetching";
-import Markdown from "../markdown";
+import { type Card } from "./fetching/fetching";
+import Markdown from "./mardown";
 
-import { LocalizationContext } from "../localization/localizationWrapper";
-import { mapLocalization } from "../localization/localizationMapper";
+import { LocalizationContext } from "./localizationWrapper";
+import { mapLocalization } from "./localization/localizationMapper";
 
 const MainPage = () => {
     const [ loading, setLoading ] = useState(false);

@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import "./index.css"
 
-import MainPage from './contents/mainPage'
+import MainPage from './mainPage'
 import NavbarComp from './contents/navBar';
 import Footer from './contents/footer';
 
