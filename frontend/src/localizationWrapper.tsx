@@ -18,6 +18,7 @@ const LocalizationWrapper = (props: LocalizationProps) => {
 
     useEffect(() => {
         setMappedLocalizationState(mapLocalization(localizationState));
+        console.log("Changed localization, now: " + localizationState);
     }, [localizationState])
 
     return(
