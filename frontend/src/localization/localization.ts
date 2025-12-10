@@ -31,11 +31,11 @@ export const localizationObj = {
     },
     mainButtonTitle: {
         ENG: ["love", "future", "career", "impression"],
-        UA: ["love", "future", "career", "impression"]
+        UA: ["кохання", "майбутнє", "кар'єра", "враження"]
     },
     predictionButtonTitle: {
         ENG: "Make Prediction",
-        UA: "Зробити передбачення"
+        UA: "Подивитися передбачення"
     }, 
     predictionTitleMessage: {
         ENG: "Your Prediction:",

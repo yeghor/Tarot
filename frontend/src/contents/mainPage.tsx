@@ -53,7 +53,7 @@ const MainPage = () => {
         <div className="py-8 px-16 w-2/3 mx-auto mt-20 p-8 bg-white rounded-3xl shadow-[0_20px_50px_rgba(139,92,246,0.15)]">
             
             <div className="text-center mb-8">
-                <p className="text-3xl font-bold text-slate-800">Tarot Prediction</p>
+                <p className="text-3xl font-bold text-slate-800">{localizationData.predictionTitle}</p>
                 <div className="h-1 w-20 bg-violet-500 mx-auto mt-2 rounded-full"></div>
             </div>
 
@@ -67,7 +67,7 @@ const MainPage = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
-                {["love", "future", "career", "impression"].map((type) => (
+                {localizationData.mainButtonTitle.map((type) => (
                     <div
                         key={type}
                         onClick={() => changeType(type as PredictionTypes)}
@@ -86,7 +86,7 @@ const MainPage = () => {
 
             <div onClick={() => makePrediction()}>
                 <button className="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-violet-200 active:scale-[0.98]">
-                    Make Prediction
+                    {}{localizationData.predictionButtonTitle}
                 </button>
             </div>
 
