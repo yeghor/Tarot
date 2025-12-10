@@ -4,11 +4,11 @@ import { type PredictionTypes } from "../project_types";
 import { fetchPredict, MEDIA_URL as mediaURLMaker } from "../fetching/fetching";
 import '../index.css'; 
 
-import { type Card } from "./fetching/fetching";
+import { type Card } from "../fetching/fetching";
 import Markdown from "../markdown";
 
-import { LocalizationContext } from "./localizationWrapper";
-import { mapLocalization } from "./localization/localizationMapper";
+import { LocalizationContext } from "../localization/localizationWrapper";
+import { mapLocalization } from "../localization/localizationMapper";
 
 const MainPage = () => {
     const [ loading, setLoading ] = useState(false);
@@ -18,6 +18,8 @@ const MainPage = () => {
     if (!localization) {
         localization = [mapLocalization("ENG"), "ENG"]
     }
+
+    const localizationData = localization[0];
 
     const [ predType, setPredType ] = useState<PredictionTypes>("love");
     const [ prompt, setPrompt ] = useState("");
@@ -102,7 +104,7 @@ const MainPage = () => {
                     })}
                 </ul>
 
-                <p className="font-bold text-gray-900">Your Prediction:</p>
+                <p className="font-bold text-gray-900">{localizationData.predictionTitle}</p>
                 <div className="my-4">
                     {Markdown(readyPrediction ?? undefined)}
                 </div>
