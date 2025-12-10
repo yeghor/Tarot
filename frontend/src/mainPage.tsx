@@ -23,12 +23,17 @@ const MainPage = () => {
     };
 
     const makePrediction = async () => {
-        const prediction = await fetchPredict(predType, prompt);
-        if (prediction) {
-            setReadyPrediction(prediction.prediction);
-            setCards(prediction.cards);
-        } else {
-            setReadyPrediction("Failed to get prediction");
+        setLoading(true);
+        try {
+            const prediction = await fetchPredict(predType, prompt);
+            if (prediction) {
+                setReadyPrediction(prediction.prediction);
+                setCards(prediction.cards);
+            } else {
+                setReadyPrediction("Failed to get prediction");
+            }
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -73,26 +78,34 @@ const MainPage = () => {
         </button>
     </div>
 
-    <ul className="p-4">
-        {cards.map((card) => {
-            return(
-                <div className={`rounded-xl p-4 my-4 shadow border-2 border-gray-300 columns-2 hover:scale-115 ${card.flipped ? "bg-violet-100" : "bg-white"} transition-all`}>
-                    <p className="col-1 font-bold text-violet-800 py-2">{card.name}</p>
-                    <p className="text-gray-700 col-1 py-2">{card.description}</p>
-                    <p className="text-violet-500 font-bold text-sm py-2">{card.flipped ? "Flipped" : "Regular"}</p>
+    {!loading ? <div className="p-4">
+        <ul className="p-4">
+            {cards.map((card) => {
+                return(
+                    <div className={`rounded-xl p-4 my-4 shadow border-2 border-gray-300 columns-2 hover:scale-115 ${card.flipped ? "bg-violet-100" : "bg-white"} transition-all`}>
+                        <p className="col-1 font-bold text-violet-800 py-2">{card.name}</p>
+                        <p className="text-gray-700 col-1 py-2">{card.description}</p>
+                        <p className="text-violet-500 font-bold text-sm py-2">{card.flipped ? "Flipped" : "Regular"}</p>
 
-                    <img className="h-40 col-2 mx-auto" src={mediaURLMaker(card.image_name)} alt="card image" />
-                </div>
-            )
-        })}
-    </ul>
-    <div className="p-4">
+                        <img className="h-40 col-2 mx-auto" src={mediaURLMaker(card.image_name)} alt="card image" />
+                    </div>
+                )
+            })}
+        </ul>
+
         <p className="font-bold text-gray-900">Your Prediction:</p>
         <div className="my-4">
             {Markdown(readyPrediction ?? undefined)}
         </div>
     </div>
-    
+        :   
+    <div className="flex items-center justify-center h-screen">
+    <div
+        className="w-12 h-12 rounded-full animate-spin
+            border-4 border-solid border-violet-700 border-t-transparent"
+    ></div>
+    </div>
+    }
 </div>
 
     )
