@@ -22,8 +22,8 @@ export interface MappedLocalization {
 
 export const localizationObj = {
     predictionTitle: {
-        ENG: "Prediction",
-        UA: "Передбачення"
+        ENG: "Tarot Predict",
+        UA: "Таро Передбачення"
     },
     mainInputPlaceHolder: {
         ENG: "What exactly you want to predict?",

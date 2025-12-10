@@ -7,19 +7,20 @@ import '../index.css';
 import { type Card } from "../fetching/fetching";
 import Markdown from "../markdown";
 
-import { LocalizationContext } from "../localization/localizationWrapper";
+import { LocalizationContext,LanguageSwitcherStateContext } from "../localization/localizationWrapper";
 import { mapLocalization } from "../localization/localizationMapper";
 
 const MainPage = () => {
     const [ loading, setLoading ] = useState(false);
 
-    let localization = useContext(LocalizationContext)
-
-    if (!localization) {
+    let localization = useContext(LocalizationContext);
+    if(!localization) {
         localization = [mapLocalization("ENG"), "ENG"]
     }
 
     const localizationData = localization[0];
+
+    console.log("localization from mainPage - ", localizationData)
 
     const [ predType, setPredType ] = useState<PredictionTypes>("love");
     const [ prompt, setPrompt ] = useState("");
@@ -61,7 +62,7 @@ const MainPage = () => {
                     onChange={(e) => setPrompt(e.target.value)}
                     className="w-full bg-slate-50 border-2 border-slate-200 rounded-2xl px-5 py-4 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-violet-400 focus:bg-white transition-colors"
                     type="text"
-                    placeholder="What exactly you want to predict?"
+                    placeholder={localizationData.mainInputPlaceHolder}
                 />
             </div>
 

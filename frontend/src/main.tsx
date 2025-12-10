@@ -12,29 +12,24 @@ import LocalizationWrapper from './localization/localizationWrapper';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div className="min-h-screen w-full bg-fuchsia-100 flex flex-col relative"> 
-      
-      <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl pointer-events-none"></div>
-
-      <div className="relative z-20 w-full">
-        <LocalizationWrapper>
+    <LocalizationWrapper>
+        <div className="min-h-screen w-full bg-fuchsia-100 flex flex-col relative"> 
+        
+        <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl pointer-events-none"></div>
+        <div className="relative z-20 w-full">
             <NavbarComp />
-        </LocalizationWrapper>
-      </div>
+        </div>
 
-      <div className="relative z-10 w-full flex-grow flex items-center justify-center py-12">
-        <LocalizationWrapper>
+        <div className="relative z-10 w-full flex-grow flex items-center justify-center py-12">
             <MainPage />
-        </LocalizationWrapper>
-      </div>
+        </div>
 
-      <div className="relative z-20 w-full">
-        <LocalizationWrapper>
+        <div className="relative z-20 w-full">
             <Footer />
-        </LocalizationWrapper>
-      </div>
-      
-    </div>
+        </div>
+        
+        </div>        
+    </LocalizationWrapper>
   </StrictMode>,
 )
 
