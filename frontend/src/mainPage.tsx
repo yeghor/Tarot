@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 
-import { type PredictionTypes } from "./project_types";
-import { fetchPredict, MEDIA_URL as mediaURLMaker } from "./fetching/fetching";
-import './index.css'; 
+import { type PredictionTypes } from "../project_types";
+import { fetchPredict, MEDIA_URL as mediaURLMaker } from "../fetching/fetching";
+import '../index.css'; 
 
 import { type Card } from "./fetching/fetching";
-import Markdown from "./mardown";
+import Markdown from "../markdown";
 
 import { LocalizationContext } from "./localizationWrapper";
 import { mapLocalization } from "./localization/localizationMapper";
