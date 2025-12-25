@@ -52,23 +52,24 @@ const NavbarComp = () => {
                             {localizationData.mainNavbarTitle.map((item: string) => (
                                 <li key={item}>
                                     <Link 
-                                        to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`} 
-                                        className="text-gray-700 font-medium hover:text-purple-600 transition-colors duration-300 relative group"
+                                        to={
+                                            item === 'Home' || item === 'головна'
+                                            ? '/'
+                                            : item === 'All Cards' || item === 'Всі карти'
+                                            ? '/allCards'
+                                            : item === 'About us' || item === 'Про нас'
+                                            ? '/aboutUs'
+                                            : item === 'GitHub'
+                                            ? 'https://github.com/yeghor/Tarot'
+                                            : '/'
+                                        }
+                                        onClick={() => setIsOpen(false)}
+                                        className="text-gray-800 font-semibold hover:text-purple-600 transition-colors"
                                     >
                                         {item}
-                                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
                                 </li>
                             ))}
-                            <li>
-                                <Link 
-                                    to="/new" 
-                                    className="text-gray-700 font-medium hover:text-purple-600 transition-colors duration-300 relative group"
-                                >
-                                    Github
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
-                                </Link>
-                            </li>
 
                         </ul>
                         <Switcher switchState={switchLocalizationState} />
@@ -82,33 +83,6 @@ const NavbarComp = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className={`md:hidden fixed inset-0 w-full h-screen bg-white/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-                <ul className="flex flex-col items-center gap-8 text-xl">
-                    {localizationData.mainNavbarTitle.map((item: string) => (
-                        <li key={item}>
-                            <Link 
-                                to={item === 'Home' || 'головна' ? '/' : `/${item.toLowerCase().replace(' ', '')}`} 
-                                onClick={() => setIsOpen(false)}
-                                className="text-gray-800 font-semibold hover:text-purple-600 transition-colors"
-                            >
-                                {item}
-                            </Link>
-                        </li>
-                    ))}
-                     <li>
-                        <Link 
-                            to="/new" 
-                            onClick={() => setIsOpen(false)}
-                            className="text-gray-800 font-semibold hover:text-purple-600 transition-colors"
-                        >
-                            Github
-                        </Link>
-                    </li>
-
-                    <Switcher switchState={switchLocalizationState} />
-                </ul>
             </div>
         </header>
     );
