@@ -1,6 +1,15 @@
-// import React from 'react';
+import Reac, { useContext } from 'react';
+import { LocalizationContext } from '../localization/localizationWrapper';
+import { mapLocalization } from '../localization/localizationMapper';
 
 const AboutUs = () => {
+    let localization = useContext(LocalizationContext);
+    if(!localization) {
+        localization = [mapLocalization("ENG"), "ENG"]
+    }
+
+    const localizationData = localization[0];
+
      return(
           <div className="py-8 px-16 w-2/3 mx-auto mt-20 p-8 bg-white rounded-3xl shadow-[0_20px_50px_rgba(139,92,246,0.15)]">
             
