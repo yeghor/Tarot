@@ -26,7 +26,7 @@ const Footer = () => {
                         <p className="text-gray-700 text-sm leading-relaxed">
                             {localizationData.mainFooterText}
                         </p>
-                        
+
                         {/*GitHub */}
                         <div className="flex space-x-5 pt-2">
                             {[
@@ -56,7 +56,7 @@ const Footer = () => {
                         <ul className="space-y-3">
                             {localizationData.mainFooterCompanyLinks.map((link) => (
                                 <li key={link}>
-                                    <a href="#" className="text-gray-700 hover:text-violet-600 transition-colors duration-200">
+                                    <a href="/aboutUs" className="text-gray-700 hover:text-violet-600 transition-colors duration-200">
                                         {link}
                                     </a>
                                 </li>
