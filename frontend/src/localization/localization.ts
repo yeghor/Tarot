@@ -19,6 +19,20 @@ export interface MappedLocalization {
     mainFooterSubscriptionButton: string
     mainFooterCopyright: string
     mainFooterCopyrightCookies: string
+    mainAboutUsTitle: string
+    mainAboutUsText: string
+    mainAboutUsMissionTitle: string
+    mainAboutUsMissionText: string
+    mainAboutUsContactButton: string
+    mainAboutUsContactText: string
+    mainAboutUsMissionButton1: string
+    mainAboutUsMissionButton2: string
+    mainAboutUsMissionButton3: string
+    mainAboutUsMissionButton4: string
+    mainCardsTitle: string
+    mainCardsText: string
+    mainCardsUpright: string
+    mainCardsReversed: string
 }
 
 export const localizationObj = {
@@ -89,5 +103,63 @@ export const localizationObj = {
     mainFooterCopyrightCookies: {
         ENG: "Cookies",
         UA: "Cookies (печінки’)"
-    }
+    },
+
+    mainAboutUsTitle: {
+        ENG: "About Us",
+        UA: "Про нас"
+    },
+    mainAboutUsText: {
+        ENG: "Welcome to our prediction platform. We combine the ancient traditions of Tarot with modern artificial intelligence technologies to provide you with the most accurate and personalized answers to your pressing questions.",
+        UA: "Ласкаво просимо на нашу платформу передбачень. Ми поєднуємо давні традиції Таро та сучасні технології штучного інтелекту, щоб надати вам найточніші та персоналізовані відповіді на хвилюючі питання."
+    }, 
+    mainAboutUsMissionTitle: {
+        ENG: "Our Mission",
+        UA: "Наша місія"
+    },
+    mainAboutUsMissionText: {
+        ENG: "To help every individual find clarity in complex life situations by providing an accessible tool for self-analysis and inspiration.",
+        UA: "Допомогти кожній людині знайти ясність у складних життєвих ситуаціях, надаючи доступний інструмент для самоаналізу та натхнення"
+    },
+    mainAboutUsContactButton: {
+        ENG: "Contact Us",
+        UA: "Зв'язатися з нами"
+    },
+    mainAboutUsContactText: {
+        ENG: "If you have any questions or suggestions, you can always contact us. We are constantly working to improve the quality of our predictions.",
+        UA: "Якщо у вас є питання або пропозиції, ви завжди можете зв’язатися з нами. Ми постійно працюємо над покращенням якості наших прогнозів."
+    }, 
+
+    mainAboutUsMissionButton1:{
+        ENG: "Accurate Predictions",
+        UA: "Точні передбачення"
+    },
+    mainAboutUsMissionButton2:{ 
+        ENG: "Availability",
+        UA: "Доступність"
+    },
+    mainAboutUsMissionButton3:{
+        ENG: "Anonymity",
+        UA: "Анонімність"
+    },
+    mainAboutUsMissionButton4:{
+        ENG: "Satisfied Clients",
+        UA: "Довольні кліенти"
+    },
+    mainCardsTitle: {
+        ENG: "Card Gallery",
+        UA: "Галерея карт"
+    },
+    mainCardsText: {
+        ENG: "Explore the meanings of each Tarot card in our deck gallery.",
+        UA: "Дізнайтеся більше про значення кожної карти Таро в нашій галереї колоди."
+    },
+    mainCardsUpright: {
+        ENG: "Upright",
+        UA: "Значення"
+    },
+    mainCardsReversed: {
+        ENG: "Reversed",
+        UA: "Перевернуте"
+    },
 }
