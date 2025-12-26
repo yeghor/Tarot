@@ -21,7 +21,21 @@ export const mapLocalization = (lang: Language): MappedLocalization => {
             mainFooterSubscriptionPlaceholder: localizationObj.mainFooterSubscriptionPlaceholder.ENG,
             mainFooterSubscriptionButton: localizationObj.mainFooterSubscriptionButton.ENG,
             mainFooterCopyright: localizationObj.mainFooterCopyright.ENG,
-            mainFooterCopyrightCookies: localizationObj.mainFooterCopyrightCookies.ENG
+            mainFooterCopyrightCookies: localizationObj.mainFooterCopyrightCookies.ENG,
+            mainAboutUsTitle: localizationObj.mainAboutUsTitle.ENG,
+            mainAboutUsText: localizationObj.mainAboutUsText.ENG,
+            mainAboutUsMissionTitle: localizationObj.mainAboutUsMissionTitle.ENG,
+            mainAboutUsMissionText: localizationObj.mainAboutUsMissionText.ENG,
+            mainAboutUsContactButton: localizationObj.mainAboutUsContactButton.ENG,
+            mainAboutUsContactText: localizationObj.mainAboutUsContactText.ENG,
+            mainAboutUsMissionButton1: localizationObj.mainAboutUsMissionButton1.ENG,
+            mainAboutUsMissionButton2: localizationObj.mainAboutUsMissionButton2.ENG,
+            mainAboutUsMissionButton3: localizationObj.mainAboutUsMissionButton3.ENG,
+            mainAboutUsMissionButton4: localizationObj.mainAboutUsMissionButton4.ENG,
+            mainCardsTitle: localizationObj.mainCardsTitle.ENG,
+            mainCardsText: localizationObj.mainCardsText.ENG,
+            mainCardsUpright: localizationObj.mainCardsUpright.ENG,
+            mainCardsReversed: localizationObj.mainCardsReversed.ENG,
         } 
     }else{
         return {
@@ -41,7 +55,21 @@ export const mapLocalization = (lang: Language): MappedLocalization => {
             mainFooterSubscriptionPlaceholder: localizationObj.mainFooterSubscriptionPlaceholder.UA,
             mainFooterSubscriptionButton: localizationObj.mainFooterSubscriptionButton.UA,
             mainFooterCopyright: localizationObj.mainFooterCopyright.UA,
-            mainFooterCopyrightCookies: localizationObj.mainFooterCopyrightCookies.UA
+            mainFooterCopyrightCookies: localizationObj.mainFooterCopyrightCookies.UA,
+            mainAboutUsTitle: localizationObj.mainAboutUsTitle.UA,
+            mainAboutUsText: localizationObj.mainAboutUsText.UA,
+            mainAboutUsMissionTitle: localizationObj.mainAboutUsMissionTitle.UA,
+            mainAboutUsMissionText: localizationObj.mainAboutUsMissionText.UA,
+            mainAboutUsContactButton: localizationObj.mainAboutUsContactButton.UA,
+            mainAboutUsContactText: localizationObj.mainAboutUsContactText.UA,
+            mainAboutUsMissionButton1: localizationObj.mainAboutUsMissionButton1.UA,
+            mainAboutUsMissionButton2: localizationObj.mainAboutUsMissionButton2.UA,
+            mainAboutUsMissionButton3: localizationObj.mainAboutUsMissionButton3.UA,
+            mainAboutUsMissionButton4: localizationObj.mainAboutUsMissionButton4.UA,
+            mainCardsTitle: localizationObj.mainCardsTitle.UA,
+            mainCardsText: localizationObj.mainCardsText.UA,
+            mainCardsUpright: localizationObj.mainCardsUpright.UA,
+            mainCardsReversed: localizationObj.mainCardsReversed.UA,
         }
     }
 }

@@ -82,6 +82,34 @@ const NavbarComp = () => {
                             <span className={`h-0.5 w-full bg-gray-800 rounded-lg transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-3 bg-red-500' : ''}`}></span>
                         </div>
                     </div>
+
+
+                <div className={`md:hidden absolute top-20 left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 py-8 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-10 invisible pointer-events-none'}`}>
+                        <ul className="flex flex-col items-center gap-6 list-none w-full">
+                            {localizationData.mainNavbarTitle.map((item: string) => (
+                                <li key={item}>
+                                    <Link 
+                                        to={
+                                            item === 'Home' || item === 'головна'
+                                            ? '/'
+                                            : item === 'All Cards' || item === 'Всі карти'
+                                            ? '/allCards'
+                                            : item === 'About us' || item === 'Про нас'
+                                            ? '/aboutUs'
+                                            : item === 'GitHub'
+                                            ? 'https://github.com/yeghor/Tarot'
+                                            : '/'
+                                        }
+                                        onClick={() => setIsOpen(false)}
+                                        className="text-xl text-gray-800 font-semibold hover:text-purple-600 transition-colors"
+                                    >
+                                        {item}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                        <Switcher switchState={switchLocalizationState} />
+                    </div>
                 </div>
             </div>
         </header>
